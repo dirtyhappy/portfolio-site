@@ -1,0 +1,566 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*-----------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+font-family: Playfair Display SC;
+src: url(fonts/PlayfairDisplaySC-Regular.otf);
+}
+
+@font-face {
+font-family: Playfair Display SC;
+font-style: italic;
+src: url(fonts/PlayfairDisplaySC-Italic.otf);
+}
+
+@font-face {
+font-family: Playfair Display SC;
+font-weight: 700;
+font-style: italic;
+src: url(fonts/PlayfairDisplaySC-BlackItalic.otf);
+}
+
+@font-face {
+font-family: Playfair Display SC;
+font-weight: 700;
+src: url(fonts/PlayfairDisplaySC-Black.otf);
+}
+
+
+
+@font-face {
+font-family: Playfair Display SC;
+font-weight: Bold;
+src: url(fonts/PlayfairDisplaySC-Bold.otf);
+}
+
+@font-face {
+font-family: Playfair Display SC;
+font-weight: Bold;
+font-style: italic;
+src: url(fonts/PlayfairDisplaySC-BoldItalic.otf);
+}
+
+@font-face {
+font-family: Baskerville;
+src: url(fonts/Baskerville.ttc);
+}
+
+img.QRcode {
+  image-rendering: pixelated;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+html, body {background-color : #000000;
+      font-family: Playfair Display SC, serif;
+      font-style: italic;
+      font-weight: bold;
+      width: 100%;
+
+      margin:0;
+      padding:0;
+      color: #fea500;
+
+
+
+}
+
+
+
+
+
+
+p {
+  color: #fea500;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  font-family: Baskerville,"Baskerville", serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 {
+  color: black;
+  font-family: Playfair Display SC, serif;
+  font-weight: bold;
+  font-size: 144pt;
+
+}
+
+
+a {
+  text-decoration: none;
+  color: #fea500;
+  cursor: pointer;
+  margin: auto;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 30pt;
+  letter-spacing: 5px;
+
+}
+
+a:hover{
+  color: white;
+}
+
+.workLink{
+  margin:0;
+  padding: 0;
+}
+
+section{
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 1s;
+  z-index: 60;
+}
+
+section.fade{
+  opacity: 1;
+  transform: translate(0, -500px);
+
+
+}
+/*-----------------------------------------------------------------------------------------------*/
+/* Nav Styles*/
+nav{
+  display: none;
+  transition: display 2s;
+}
+
+nav.show{
+  display:block;
+
+}
+
+.main-menu-left{
+  padding-left: 50px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: 500px;
+  text-align: left;
+}
+
+
+.fixed-hamburger{
+  position: absolute;
+  z-index: 60;
+  left: 0;
+  top: 0;
+  transition: top .5s
+}
+
+.fixed-hamburger.hide{
+  top: -100px;
+}
+
+.hamburger-module {
+  cursor: pointer;
+  padding: 38px 25px;
+}
+
+.hamburger {
+  position: relative;
+  height: 16px;
+  width: 28px;
+}
+
+.hamburger span {
+  position: absolute;
+  background-color: black;
+  width: 30px;
+  height: 5px;
+
+  left: 0;
+  transition: all .2s;
+}
+
+.white span{
+  background-color: #fea500;
+}
+
+.hamburger span.hamburger-show{
+  background-color: #fea500;
+}
+.hamburger span {
+    top: 7px;
+}
+.hamburger span:nth-child(2){
+  top:7px;
+  transform: rotateZ(-90deg);
+}
+
+.hamburger span.hamburger-show:nth-child(2){
+  transform: rotateZ(0deg);
+
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/* Index Styles*/
+.indexSection {
+  width:100%;
+  height:750px;
+  padding-top:100px;
+  overflow: hidden;
+
+
+}
+.indexHeading{
+  color: #fea500;
+  margin: auto;
+  padding: 10px 10px;
+  font-size: 96pt;
+  letter-spacing: 5px;
+}
+
+.indexCenter{
+  text-align: center;
+  /*border-width: medium;
+  border-style: solid;*/
+}
+
+
+.indexOrange {
+  max-width:40%;
+  height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*border-style: solid;
+  border-width: medium;*/
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/* About Page Styles*/
+.aboutContainer{
+  width:100%;
+  height: 750px;
+  background-color: #fea500;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
+}
+
+#aboutLeft{
+  float:left;
+  width:50%;
+  text-align:left;
+  overflow: visible;
+  padding-left: 20px;
+
+}
+
+#aboutRight{
+  float:right;
+  width:50%;
+
+}
+
+#aboutRight img{
+  max-width:120%;
+  height:auto;
+
+}
+.about{
+  color:black;
+  padding-left: 75px;
+}
+
+#aboutParagraph{
+padding-right:10px;
+margin: 0 auto 0 -15;
+
+}
+
+.contactLink{
+  color: black;
+  font-size: 24pt;
+  letter-spacing: 1px;
+  padding: 0;
+  padding-right:10px;
+  margin: 0 auto 0 -15;
+
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/* Work Page Styles*/
+article.workContainer{
+  width:100%;
+  height:100%;
+  background-color: #fea500;
+  overflow:scroll;
+}
+
+h1.workHeading{
+  text-align: center;
+}
+.workSection{
+  width:100%;
+  height: auto;
+  overflow: scroll;
+  clear: both;
+  background-color: #fea500;
+  padding-top: 30px;
+}
+
+.workLeft{
+  float:left;
+  width: 33.33%;
+
+
+
+}
+.workCenter{
+  float:left;
+  width: 33.33%;
+
+
+
+}
+.workRight{
+  float:left;
+  width: 33.33%;
+
+}
+
+.workImage{
+  max-width:95%;
+  height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  opacity:1;
+  transition: .5s ease;
+}
+
+.workImageContainer{
+  background-color: #fea500;
+  max-width:100%;
+  height: auto;
+  position: relative;
+  transition: .5s ease;
+}
+
+.workImageContainer:hover img{
+  opacity: .3;
+}
+
+.workImageContainer:hover .workText{
+  opacity: 1;
+}
+
+
+
+.workText{
+  color:white;
+  opacity:0;
+  font-size: 24px;
+  font-family: "Baskerville";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  letter-spacing: 1px;
+  transition: .7s ease;
+}
+
+.workLink{
+  margin:0;
+  padding: 0;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/* Description Page Styles*/
+article.descriptionContainer{
+  width:100%;
+  height:100%;
+  background-color: #fea500;
+  overflow:scroll;
+}
+
+
+.descriptionHeader{
+  text-align: center;
+  color: black;
+  font-size: 72pt;
+  letter-spacing: 5px;
+  padding-bottom: 50px;
+  background-color: #fea500;
+}
+
+.descriptionParagraph{
+  text-align: left;
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color:black;
+}
+
+.description-left{
+  width:50%;
+  float:left;
+}
+.description-right{
+  width:50%;
+  float:right;
+}
+.descriptionImage{
+  max-width: 95%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
+
+.descriptionSection{
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+@media (max-width:960px){
+  .indexHeading{
+    font-size: 72pt;
+  }
+  #aboutLeft{
+    float:none;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  #aboutRight{
+    display: none;
+  }
+  #aboutParagraph{
+    text-align: left  ;
+  }
+  h1{
+    font-size: 100pt;
+  }
+   p{
+     font-size: 10pt;
+   }
+   a{
+     font-size: 25pt;
+   }
+   .descriptionParagraph{
+     font-size: 10pt;
+   }
+   .descriptionHeader{
+     font-size: 50pt;
+   }
+
+   .main-menu-left, .main-menu-right{
+     float:none;
+   }
+}
+
+@media (max-width:800px){
+  .indexHeading{
+    font-size: 48pt;
+  }
+  h1{
+    font-size: 72pt;
+  }
+  p{
+    font-size: 8pt;
+  }
+  a{
+    font-size: 15pt;
+  }
+  .descriptionParagraph{
+    font-size: 8pt;
+  }
+
+.descriptionHeader{
+  font-size: 32pt;
+  }
+  .workLeft{
+    float:none;
+    width: 100%;
+  }
+  .workCenter{
+    float: none;
+    width: 100%;
+  }
+
+  .workRight{
+    float:none;
+    width: 100%;
+  }
+
+
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/* These are the classes that are going to be applied: */
